@@ -1,0 +1,18 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<!--<html>-->
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Index</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/main.css}">
+</head>
+
+<body>
+    <h1>Index</h1> <br>
+    <p th:text="#{messages.hello}">Welcome to our site!</p> <br>
+    <h2 th:utext="${message}">MSG</h2> <br>
+
+    <a th:href="@{/contacts}">Contact List</a> <br>
+
+</body>
+</html>

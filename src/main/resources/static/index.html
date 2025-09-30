@@ -1,0 +1,40 @@
+<!--<html xmlns:th="http://www.thymeleaf.org">-->
+<html>
+<head>
+    <title>A Sample Form Using GET</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+<h2>A Sample Form/h2>
+
+    <div class="myform">
+        <form action="https://www.google.com.ua">
+            First name:
+            <input type="text" name="q" placeholder="J. Random"><br>
+            Last name:
+            <input type="text" name="lastname" placeholder="Super Hacker"><br>
+            <p>
+                <input type="submit" value="ClickMe">
+            </p>
+        </form>
+    </div>
+
+    <div id="example">Goto Example</div>
+    <br>
+
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script>
+        $(
+            //function() { $('div').hide(5000); }
+            function () {
+                $('div.myform').hide(5000);
+                $('#example').click(
+                    function () {
+                        $(this).html('<p class="myform">example.html</p>');
+                    });
+            }
+        );
+    </script>
+
+</body>
+</html>

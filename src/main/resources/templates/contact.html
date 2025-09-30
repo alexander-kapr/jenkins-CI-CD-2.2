@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Add Contact</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/main.css}">
+</head>
+
+<body>
+<h1>Create Contact</h1>
+
+<form th:action="@{/contact}"
+      th:object="${contactDto}" method="POST">
+    <div class="main">
+        <div class="field">
+            <label for="firstname">firstname:</label>
+            <input type="text" id="firstname" onfocus= "clearInput(this)" th:field="*{firstname}"/> <!-- $(personDto.firstName} -->
+            <br/>
+        </div>
+        <div class="field">
+            <label for="lastname">lastname:</label>
+            <input type="text" id="lastname" onfocus= "clearInput(this)" th:field="*{lastname}"/>
+            <br/>
+        </div>
+        <div class="field">
+            <label for="email">email:</label>
+            <input type="text" id="email" onfocus= "clearInput(this)" th:field="*{email}"/>
+            <br/>
+        </div>
+        <div class="field">
+            <label for="telephone">telephone:</label>
+            <input type="text" id="telephone" onfocus= "clearInput(this)" th:field="*{telephone}"/>
+            <br/>
+        </div>
+        <div class="field">
+            <input type="submit" value="Create"/>
+            <br/>
+        </div>
+        <div th:if="${errorMessage}" th:utext="${errorMessage}"
+             style="color:red;font-style:italic;">
+        </div>
+    </div>
+</form>
+
+<script th:src="@{/js/events.js}"></script>
+
+</body>
+</html>

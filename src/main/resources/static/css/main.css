@@ -1,0 +1,49 @@
+body {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    background-color: #FDF5E6;
+}
+
+h2 {
+    text-align: center
+}
+
+.myform {
+    text-align: center
+}
+
+h1 {
+    color: #0000FF;
+}
+
+h2 {
+    color: #FF0000;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 5px;
+}
+
+/*
+	P.cite {color: navy; margin-left: 20px; border-left: 1px solid navy; padding-left: 15px; }
+	P.cite {margin-left: 20px; border-left: 1px solid navy; padding-left: 15px; }
+ */
+
+.field {
+    clear: both;
+    text-align: right;
+    line-height: 25px;
+}
+
+label {
+    float: left;
+    padding-right: 10px;
+}
+
+.main {
+    float: left
+}
